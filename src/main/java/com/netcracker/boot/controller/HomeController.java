@@ -8,8 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @RequestMapping(value = "/{id}",  method = RequestMethod.GET)
+    private String nameId = "Artem and Ann";
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String index(@PathVariable(value = "id") int id) {
         return "Congratulations from " + id;
+    }
+
+    @RequestMapping(value = "/response", method = RequestMethod.GET)
+    public String response() {
+        return "Congratulations from " + nameId;
     }
 }
