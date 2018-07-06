@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    private String nameId = "Artem and Ann";
+    private String dbValue = "From database";
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String index(@PathVariable(value = "id") int id) {
@@ -17,6 +17,6 @@ public class HomeController {
 
     @RequestMapping(value = "/response", method = RequestMethod.GET)
     public String response() {
-        return "Congratulations from " + nameId;
+        return "Congratulations from " + dbValue;
     }
 }
