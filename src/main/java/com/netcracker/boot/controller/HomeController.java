@@ -22,6 +22,6 @@ public class HomeController {
 
     @RequestMapping(value = "/response", method = RequestMethod.GET)
     public String response() {
-        return "Congratulations from " + dbValue + " " + personService.findPersonById(10);
+        return "Congratulations from " + dbValue;
     }
 }
